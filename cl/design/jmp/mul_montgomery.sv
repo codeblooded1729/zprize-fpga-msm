@@ -1,12 +1,12 @@
 `default_nettype none
 
 (* keep_hierarchy = "yes" *) module mul_montgomery #(
-    WI=378,WQ=377,WR=384,WM=48*8,L=3,T0=32'h07F7_FBBB,T1=32'h0000_005F,T2=32'h07F7_FBBB,
+    WI=382,WQ=381,WR=384,WM=48*8,L=3,T0=32'h07F7_F999,T1=32'h0000_005F,T2=32'h07F7_F999,
     M=1,
-
-    // BLS12-377
-    Q=384'h1AE3A4617C510EAC63B05C06CA1493B1A22D9F300F5138F1EF3622FBA094800170B5D44300000008508C00000000001,
-    QP=384'hbfa5205feec82e3d22f80141806a3cec5b245b86cced7a1335ed1347970debffd1e94577a00000008508bfffffffffff,
+//32'h07F7_FBBB
+    // BLS12-381
+    Q=384'h1a0111ea397fe69a4b1ba7b6434bacd764774b84f38512bf6730d2a0f6b0f6241eabfffeb153ffffb9feffffffffaaab,
+    QP=384'hceb06106feaafc9468b316fee268cf5819ecca0e8eb2db4c16ef2ef0c8e30b48286adb92d9d113e889f3fffcfffcfffd,
 
     R_I=1,
     R_O=1
@@ -25,7 +25,7 @@
 
 logic [WM-1:0] in0_r;
 logic [WM-1:0] in1_r;
-logic [M-1:0] m_i_r;
+logic [M-1:0]  m_i_r;
 
 generate
 
